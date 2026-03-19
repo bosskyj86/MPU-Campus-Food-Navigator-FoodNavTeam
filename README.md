@@ -1,150 +1,184 @@
 \# MPU Campus Food Navigator
 
-A WeChat Mini Program for Macao Polytechnic University students to browse campus \& nearby food options, filter by scene/cost, and collect favorite stores.
+A mini-program for campus food search, filtering, and collection.
 
 
 
-\## Project Overview
-
-This mini program is designed to solve the problem of MPU students struggling to find detailed food information on campus and around the school. It includes 15 food spots (canteens, restaurants, vending machines, etc.), with core information such as location, price range, recommended dishes, and business hours.
+\---
 
 
 
-\## Team Members \& Responsibilities
+\## 1. Graphical Abstract
 
-| Name          | Student ID | GitHub Username | Role                  | Responsibilities                                  |
+\*Figure: MPU Campus Food Navigator Demo Interface\*
+
+https://github.com/bosskyj86/MPU-Campus-Food-Navigator-FoodNavTeam/blob/abaface25c6cece9f3ddfd750d2ed5002d1afe7f/images/MPU%20Campus%20Food%20Navigator%20Demo%20Interface.png
+
+
+
+\---
+
+
+
+\## 2. Purpose of the Software
+
+\### Software Development Process
+
+We used the \*\*Waterfall model\*\* for this project.
+
+
+
+\### Why Waterfall?
+
+\- Clear requirements from the beginning
+
+\- Simple structure, easy to manage
+
+\- Suitable for small-scale, fixed-scope software
+
+
+
+\### Target Users
+
+\- MPU students
+
+\- Visitors to Macao Polytechnic University
+
+\- People who want to find nearby food and canteens
+
+
+
+\---
+
+
+
+\## 3. Software Development Plan
+
+\### Development Process
+
+1\. Requirement analysis
+
+2\. System design
+
+3\. Coding (WeChat Mini Program)
+
+4\. Testing
+
+5\. Deployment to GitHub
+
+
+
+\### Members \& Roles
+
+| Name | Student ID | GitHub Username | Role | Responsibilities |
+
+
 
 |---------------|------------|-----------------|-----------------------|---------------------------------------------------|
 
-| ZHANG YIXIAO  | p2423046   | bosskyj86       | Team Leader \& Developer | Overall project management, mini program development |
 
-| LI XILIN      | p2528480   | lllxxl-cmd      | Data Collector        | Collect and organize food information             |
 
-| DENG YUFEI    | p2421420   | mpudengyufei    | Document Writer       | Write project documentation and graphical abstract |
+| ZHANG YIXIAO | p2423046 | bosskyj86 | Team Leader \& Developer | Overall project management, mini program development |
 
-| CHEN YIXIN    | p2422219   | p2422219        | Video Producer        | Record and edit demo video                        |
 
 
+| LI XILIN | p2528480 | lllxxl-cmd | Data Collector | Collect and organize food information |
 
-\## Core Features
 
-1\. \*\*Food List Display\*\*: Show all 15 food spots with complete information (name, location, price, etc.)
 
-2\. \*\*Scene Filter\*\*: Filter by "Breakfast/Lunch/Dinner" or "Coffee/Snack"
+| DENG YUFEI | p2421420 | mpudengyufei | Document Writer | Write project documentation and graphical abstract |
 
-3\. \*\*Cost Filter\*\*: Filter by price range (≤30MOP / 30-60MOP)
 
-4\. \*\*Collection Function\*\*: Collect favorite food spots and view them in one click
 
-5\. \*\*Reset Filter\*\*: Clear all filters to view the full list
+| CHEN YIXIN | p2422219 | p2422219 | Video Producer | Record and edit demo video |
 
 
 
-\## Data Structure
+\### Schedule
 
-Each food spot includes 6 core fields (no scope/campus card):
+\- Week 1: Requirement \& design
 
-| Field Name         | Description                  | Example                                          |
+\- Week 2: Code implementation
 
-|--------------------|------------------------------|--------------------------------------------------|
+\- Week 3: Test \& debug
 
-| id                 | Unique ID for each spot      | 001, 002, ..., 015                               |
+\- Week 4: GitHub upload \& documentation
 
-| name               | English name of the spot     | Koi Kei Bakery, Meng Tak Canteen                 |
 
-| location           | English location description | 1/F, Meng Tak Building, Macao Main Campus        |
 
-| average\_cost\_mop   | Price range (MOP)            | 35, 140, 8-15                                    |
+\### Algorithm / Core Logic
 
-| recommended\_dishes | Recommended food/drinks      | Almond Snowflake Crisp, Pork Chop Rice           |
+\- Scene filtering (Meal / Coffee/Snack)
 
-| business\_hours     | Business hours (English)     | 10:00-22:00, all day, weekdays:08:00-21:00       |
+\- Price filtering (≤30 MOP / 30–60 MOP)
 
-| scene              | Food scene                   | Breakfast/Lunch/Dinner, Coffee/Snack             |
+\- Local storage for collection function
 
 
 
-\## Project Structure
+\### Current Status
 
-MPU-Campus-Food-Navigator-FoodNavTeam/
+✅ All functions work normally
 
-├── src/ # Core mini program code (ZHANG YIXIAO)
+✅ Data display
 
-│ ├── data/ # Food data (JSON file, LI XILIN)
+✅ Filtering
 
-│ │ └── mpu\_food\_info.json
+✅ Collection
 
-│ ├── pages/ # Mini program pages (only index page)
+✅ Reset
 
-│ │ └── index/ # Home page (all functions here)
 
-│ ├── app.js # Global logic
 
-│ ├── app.json # Global configuration
+\### Future Plan
 
-│ └── app.wxss # Global styles
+\- Add map location
 
-├── doc/ # Graphical abstract and documents (DENG YUFEI)
+\- Add search bar
 
-├── demo/ # Demo video (CHEN YIXIN)
+\- Add user comments
 
-├── .gitignore # Git ignore file
+\- Add more food spots
 
-├── LICENSE # MIT License
 
-└── README.md # Project documentation (English)
 
+\---
 
 
 
+\## 4. Demo Video
 
+YouTube URL:
 
+https://youtu.be/你的视频链接
 
-\## How to Run the Mini Program
 
-\### 1. Prepare Tools
 
-\- Install WeChat Developer Tools (stable version)
+\---
 
-\- Use WeChat to scan the QR code to log in
 
 
+\## 5. Development Environment
 
-\### 2. Import Project
+\- Language: JavaScript, WXML, WXSS, JSON
 
-1\. Open WeChat Developer Tools → Click "+" → Select "Mini Program"
+\- Tool: WeChat DevTools
 
-2\. Project Name: MPU Campus Food Navigator
+\- System: Windows / macOS
 
-3\. Project Directory: Select the "src/" folder of this repository (local clone)
+\- Framework: WeChat Mini Program
 
-4\. AppID: Select "Test ID" (no need for official ID)
 
-5\. Click "Create" to initialize the project
 
+\---
 
 
-\### 3. Core Operations
 
-\- \*\*Filter by Scene\*\*: Click "Meal" or "Coffee/Snack" button
+\## 6. Declaration of Open Sources
 
-\- \*\*Filter by Cost\*\*: Click "≤30MOP" or "30-60MOP" button
+We use:
 
-\- \*\*Collect Spot\*\*: Click "Collect" button on the food card
+\- WeChat Mini Program official API
 
-\- \*\*View Collection\*\*: Click "My Collection" button
-
-\- \*\*Reset Filter\*\*: Click "Reset" button
-
-
-
-\## Demo Video
-
-The demo video will be uploaded to the /demo folder by CHEN YIXIN (p2422219) after completion.
-
-
-
-\## License
-
-This project is licensed under the MIT License.
+\- No other external libraries
 
